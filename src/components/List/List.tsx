@@ -9,7 +9,7 @@ type ListProps = {
     removeItem: (key:string) => void
 }
 
-const List: React.FC<ListProps> = ({items, removeItem}: ListProps) => {
+const List = ({items, removeItem}: ListProps) => {
     return (
         <ul className={styles.list}>
             {items.map(item =>  

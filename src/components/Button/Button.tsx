@@ -1,14 +1,17 @@
-import React, { ButtonHTMLAttributes } from "react";
+import React, {ButtonHTMLAttributes} from "react";
 import styles from "./Button.module.scss";
 
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
 
-const Button: React.FC<ButtonProps> = ({ disabled = false, children }: ButtonProps) => {
+const Button = ({ disabled, children, ...props }: ButtonHTMLAttributes<HTMLButtonElement>) => {
   return (
-    <button disabled={disabled} className={styles.button}>
+    <button disabled={disabled} className={styles.button} {...props} >
       {children}
     </button>
   );
 };
+
+Button.defaultProps = {
+  disabled: false
+}
 
 export default Button;

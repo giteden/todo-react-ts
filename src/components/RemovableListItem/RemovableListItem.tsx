@@ -10,7 +10,7 @@ type RemovableListItemProps = {
 }
 
 
-const RemovableListItem : React.FC<RemovableListItemProps> = ({text, id, removeItem} : RemovableListItemProps) => {
+const RemovableListItem  = ({text, id, removeItem} : RemovableListItemProps) => {
     const [isCompleted, setIsCompleted] = useState(false);
     return(
         <li className={styles.listItem}>
